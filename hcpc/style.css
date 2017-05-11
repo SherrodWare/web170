@@ -1,0 +1,280 @@
+/* GLOBAL RULES FOR DINER */
+
+html {
+    background-color: sandybrown;
+   /* background-image:  url("../images/football.jpg");*/
+    
+    /* Theme Name: Web 2017 HCPC 
+Theme URI: https://github.com/SherrodWare/web170/tree/master/hcpc
+Author: Sherrod Ware
+Author URI: http://sherrodware.com
+Description: This is my HCPC project for Web 170 WordPress
+section 01 spring 2017
+Version 42.0
+*/
+}
+
+body {
+    color: #000;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 1em;
+    background-color:#fff;
+}
+
+header{
+    border: 1px solid #fff;
+    height: auto;
+    width: auto;
+}
+
+header h1{
+    letter-spacing: 10px;
+    font-family: default;
+    font-size: 48px;
+    color:black;
+   /* text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;*/
+}
+
+.banner{
+    width:50%;
+}
+
+.content{
+    width: 80%;
+    margin: auto;
+}
+
+table.players{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table.players td{
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.men{
+    align-content: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+table{
+    width: 80%;
+    margin: auto;
+}
+
+table.menu figure{
+    display: inline-block;
+    float:left;
+    width: 32%;
+    margin: .2em;
+   
+}
+
+table.menu figcaption{
+        padding-bottom: 1em;
+}
+
+table.menu figure img{
+    height: 250px;
+    margin: auto;
+}
+
+h1, h2, h3{
+    text-align: center;
+    letter-spacing: 10px;
+    font-family: default;
+    font-size: 48px;
+    color:black;
+}
+
+div.contact{
+    width: 320px;
+    margin:auto;
+}
+
+form div, textarea {
+    margin-bottom: 1em;
+}
+
+p{
+    text-align: justify;
+}
+
+
+footer{
+    padding-top: 2em;
+}
+
+/* responsive code for iframes */
+
+.embed-container{
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow:hidden;
+	max-width: 100%;
+}
+.embed-container iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.calendar{
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow:hidden;
+	max-width: 100%;
+}
+.calendar iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* end of responsive code for iframe */
+
+figure{
+    display: inline-block;
+    width: 32%;
+    margin: 0;
+}
+
+figcaption{
+    text-align: center;
+}
+
+figure img{
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+/* DESKTOP */
+@media all and (min-width:1280px){
+
+section {
+        float: left;
+        width: 66%;       
+}
+    
+section div.disclaimer{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+    
+    section.disclaimersect{
+        width: 80%;
+        margin: 0 auto;
+        float: none;
+    }
+
+section h2, div.men h2{
+        letter-spacing: 5px;
+        font-family:default;
+        font-size: 48px;
+        color:black;
+       /* text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000; */
+    }
+    
+div.menu{
+        width: 80%;
+        margin: auto;
+}
+    
+aside{
+        float: right;
+        width: 32%;      
+}
+    
+    article{
+        width:65%;
+        float:left;
+    }
+}
+
+/* TABLET */
+/*@media all and (min-width:481px) and (max-width:1278px) {
+    html{
+    background-image: url(../images/football.jpg);
+    }
+   body {
+       background-color:white;
+       width:65%;
+       margin:auto;
+       padding:2em;
+       min-height:600px;
+   }
+   img.desktop, img.phone {
+       display:none;
+   }
+
+}
+/* PH
+
+/* PHONE */
+@media all and (max-width:480px){
+body {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+     
+}
+      
+figure{
+    display: inline;
+    width: 95%;
+    margin: 0 auto;
+}
+    
+table.menu figure{
+    display: inline;
+    width: 95%;
+    margin: 0 auto;
+}
+
+table.menu figure img{
+    height: 150px;
+    margin: auto;
+}
+    
+table.menu figcaption{
+        padding-bottom: 1em;
+}
+}
+
+img#logo {
+    float:left;
+    padding-top:15px;
+}
+
