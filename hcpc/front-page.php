@@ -22,35 +22,22 @@
 </div>
 <!-- Begin Text -->
 <div id="content">
-    <?php if ( have_posts() ) : while (have_posts() ) : the_psot(); ?>
+    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
     <article id="article-<?php the_ID(); ?>" class="article">
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </article>
     <?php endwhile; endif; ?>
-    <small>front-page.php</small>
-    <?php rewind_posts()://sstop loop one ?>
-    <?php query_posts(array('post_type' => 'page', 'posts_per_page' => -1, 'posts_status' => 'publish','post_parent' => 185,'order' => 'ASC'
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<!--    <small>front-page.php</small>-->
+    <?php rewind_posts();//stop loop one ?>
+    <?php query_posts(array('post_type' => 'page', 'posts_per_page' => -1, 'posts_status' => 'publish','post_parent' => 185,'order' => 'ASC')); ?>
+    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+    
+    
+    <?php endwhile; endif;//end second loop ?>
     
     </div>
+    <small>front-page.php</small>
+
  <!-- End Text -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-    
-           
-<p>  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
-<small>front-page.php</small>
-    
-<?php include "footer.php" ?>
-<?php wp_footer() ?>
-
-
-	
-
-	
-
-	
-
-
-
-
