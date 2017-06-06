@@ -22,8 +22,10 @@
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); // start the loop ?>
 <h2><a href="<?php the_permalink(); // link to the page or posting ?>"><?php the_title(); // get the page or posting title ?></a></h2>
         <small>Posted on <?php the_time('F j, Y');//get the time ?>by <?php the_author();//get the author's name ?> in <?php the_category(', ');//get the category ?></small>
-<?php the_excerpt(); // get the posting's excerpt ?>
-<?php endwhile; endif; // end the loop ?>
+        <?php the_post_thumbnail( 'thumbnail' ); ?>
+
+        <?php the_excerpt(); // get the posting's excerpt ?>
+        <?php endwhile; endif; // end the loop ?>
          </div>
         <li class ="post-navigation-previous"><?php previous_posts_link('&laquo;&nbsp;Newer' ) ?></li>
         <li class ="post-navigation-previoous"><?php previous_posts_link('Older&nbsp;&raquo;' ); ?></li>
