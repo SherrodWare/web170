@@ -22,22 +22,26 @@
 </div>
 <!-- Begin Text -->
 <div id="content">
-    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+    <h2>Home</h2>
+    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); //start loop one ?>
+    <?php the_content(''); //get the home page's content ?>
+     <?php endwhile; endif;//end loop one ?>
+    
     <article id="article-<?php the_ID(); ?>" class="article">
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </article>
-    <?php endwhile; endif; ?>
-<!--    <small>front-page.php</small>-->
-    <?php rewind_posts();//stop loop one ?>
-    <?php query_posts(array('post_type' => 'page', 'posts_per_page' => -1, 'posts_status' => 'publish','post_parent' => 185,'order' => 'ASC')); ?>
-    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
+    <h2>Latest Postings</h2>
+    <?php rewind_posts();  ?>
+<?php query_posts('showposts=3'); // give directions to loop two ?>
+<?php while (have_posts()) : the_post(); // start loop two ?>
+<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endwhile; // end loop two ?>
+    <h2>Contact Me</h2>
+    <p><strong>Phone; </strong>206.000.0000<br><strong>Email: </strong> <a href="mailto:kungskii88@gmail.com"></a></p>
     
-    
-    <?php endwhile; endif;//end second loop ?>
     
     </div>
     <small>front-page.php</small>
 
  <!-- End Text -->
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
