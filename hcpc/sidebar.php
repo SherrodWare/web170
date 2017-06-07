@@ -20,4 +20,19 @@ if (is_page()) {
 		}
 		echo '</ul>';
 ?>
+ <?php if (!(is_page())) : // if we are not in "pages"...
+    ?>
+    <h2 class="sub-navigation-titile">Blog</h2>
+    <ul class="sub-navigation-items"><?php
+        wp_list_categories(array('title_li' => '',)); //list the categories with no title ?></ul>
+    <?php endif; ?>
+    <!-- End Sub-Navigation -->
+    
+    <!-- Begin Quote -->
+    <?php if (get_post_meta($post->ID, 'Quote', true)) : //check to see if theis is a quote ?>
+    
+    <blockquote><?php echo get_post_meta($post->ID, 'Quote', true) ; // write out the quote ?></blockquote>
+    <?php endif; ?>
+    <!-- End Quote -->
+        
 </aside>
