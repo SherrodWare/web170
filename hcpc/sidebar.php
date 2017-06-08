@@ -34,5 +34,7 @@ if (is_page()) {
     <blockquote><?php echo get_post_meta($post->ID, 'Quote', true) ; // write out the quote ?></blockquote>
     <?php endif; ?>
     <!-- End Quote -->
+    <?php dynamic_sidebar(1); // call our widgets ?>
+    <!-- End Dynamic Sidebar -->
         
 </aside>
