@@ -1,11 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
     <meta charset="utf-8">
-    <title>HC PROFRESSIONAL CARE</title>
+    <!-- Start title Tag -->
+    <title>HC PROFRESSIONAL CARE | Home Care | Seattle, WA.</title>
+    <!-- Start Meta -->
+<meta name="description" content="<?php echo get_the_excerpt(); ?>" />
+<meta name="keywords" content="Home Care, Caregivers, Bog, About The Company, Contact Information, Hilary Corr Seattle, Washington" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    
+<!-- End Meta -->
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/blueberry.css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" />
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/nav.css" />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.blueberry.js"></script>
